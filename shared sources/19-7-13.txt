@@ -1,0 +1,14 @@
+2019-7-13
+论文摘要中的基本句型
+摘要通常包含陈述、动机、方法、结果及结论五个要素。
+（1）问题陈述：陈述问题及其地位、重要性
+例：p is an important component in P and plays a key role in d.
+（2）动机：指出解决的具体问题（及目的）
+例： this study aims to elucidate R of X observed in P.
+（3）方法：采用的研究方法（及其特征、来源）
+例： the method of p is used in this paper.
+（4）结果：呈现主要结果，定量则量化到最后一级，定性则应无歧义
+例： we obtain the results of X and that …
+（5）结论：结果对同方向问题的含义、影响及价值
+例： these results cast light on …
+此外，可用一些特有巨型将多个要素概括于一句中。
