@@ -1,0 +1,11 @@
+2019-7-4
+可解释的机器学习
+表明：模型可使用人类认知的说法进行解释、呈现
+重要性：可靠性、易于调试；启发特征工程思路...
+具体技术：
+1.permutation importance
+用于计算特征的重要性，方法是，仅变动特定数据，若预测准确率显著下降，则该特征重要，它在模型拟合完成后实现。
+2.partial dependency plots
+展示特征对于模型预测的边际效益。python中有PDPbox。
+3.SHAP values
+细分预测以显示各个特征的影响，使用Shap库。高级用法包括：SHAP摘要图绘制，Dependence Contribution图等。
