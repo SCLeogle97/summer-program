@@ -1,1 +1,1 @@
-This chapter includes some courses that will be taught or have been learned.
+This chapter includes notes on courses that will be taught or have been learned.
