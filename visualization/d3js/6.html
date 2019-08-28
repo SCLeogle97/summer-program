@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	.bar {
+		fill:DarkSlateBlue;
+	}
+	.bar-label {
+		text-anchor:end;
+	}
+	.axis-label {
+		text-anchor:middle;
+		font-size:13px;
+	}
+</style>
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+	var popData=[1.6,1.5,2.1,2.6,3.4,4.5,5.1,6.0,6.6,7.1,7.3,8.1,8.9,8.8,8.6,8.8,9.3];
+	var axisData=[0,2.5,5.0,7.5];
+	var barLabels=["80 and up","75-79","70-74","65-69","60-64","55-59","50-54","45-49","40-44","35-39","30-34","25-29","20-24","15-19","10-14","5-9","0-4"];
+	
+	var width=400,
+		leftMargin=100，
+		topMargin=30,
+		barHeight=20,
+		barGap=5,
+		tickGap=5,
+		tickHeight=10,
+		scaleFactor=width/Math.max.apply(null,popData),
+		barSpacing=barHeight+barGap,
+		translateText="translate("+leftMargin+","+topMargin+")",
+		scaleText="scale("+scaleFactor+",1)";
+	var body=d3.select("body");
+	var i;
+	
+	body.append("h2").style("font-family","courier new").text("Age distribution of the world, 2010");
+	
+	var svg=body.append("svg").attr("height",500).attr("width",500);
+	
+	var barGroup=svg.append("g").attr("transform",translateText+" "+scaleText).attr("class","bar");
+	
+	for(i=0;i<popData.length;i++){
+		barGroup.append("rect").attr("x",0).attr("y",i*barSpacing).attr("height",barHeight).attr("width",popData[i]);
+	}
+	
+	var barLabelGroup=svg.append("g").attr("transform",translateText).attr("class","bar-label");
+	
+	for(i=0;i<barLabels.length;i++){
+		barLabelGroup.append("text").attr("x",-10).attr("y",i*barSpacing+barHeight*(2/3)).text(barLabels[i]);
+	}
+	
+	var axisTickGroup=svg.append("g").attr("transform",translateText).attr("stroke","black");
+	
+	var axisLabelGroup=svg.append("g").attr("transform",translateText).attr("class","axis-label");
+	
+	for(i=0;i<axisData.length;i++){
+		axisTickGroup.append("line").attr("x1",axisData[i]*scaleFactor).attr("x2",axisData[i]*scaleFactor).attr("y1",0)
+					 .attr("y2",-tickHeight);
+		axisLabelGroup.append("text").attr("x",axisData[i]*scaleFactor).attr("y",-tickHeight-tickGap).text(axisData[i]+"%");
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.blue-group{
+	fill:blue;
+	stroke-width:3;
+}
+.red-group{
+	fill:red;
+	stroke-width:4;
+	font-weight:bold;
+}
+.green-group{
+	fill:green;
+	stroke-width:2;
+	font-family:Arial;
+	fill-opacity"0.5;
+	}
+</style>
+</head>
+<body>
+	<svg width="600px" height="500px">
+		<g class="blue-group">
+			<text x="0" y="20">Blue Group</text>
+			<rect x="0" y="40" width="50" height="50" rx="10" ry="10"/>
+			<polygon points="80,30 70,70 130,50"/>
+			<line x1="60" y1="75" x2="120" y2="90" stroke="blue"/>
+		</g>
+		
+		<g class="red-group" transform="translate(200)">
+			<text x="0" y="20">Red Group</text>
+			<rect x="0" y="40" width="50" height="50" rx="10" ry="10"/>
+			<polygon points="80,30 70,70 130,50"/>
+			<line x1="60" y1="75" x2="120" y2="90" stroke="red"/>
+		</g>
+		
+		<g class="green-group" transform="translate(200,120) rotate(90)">
+			<text x="0" y="20">Green Group</text>
+			<rect x="0" y="40" width="50" height="50" rx="10" ry="10"/>
+			<polygon points="80,30 70,70 130,50"/>
+			<line x1="60" y1="75" x2="120" y2="90" stroke="green"/>
+		</g>
+	</svg>
+</body>
+</html>
+		
