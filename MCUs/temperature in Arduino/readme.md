@@ -1,0 +1,1 @@
+任务：在arduino uno端基于ds18b20获取温度，利用python读取数据并绘图。
